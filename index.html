@@ -34,7 +34,7 @@
 
 		var marker = new google.maps.Marker({map:map, position: coords});
 		for(let i =0 ;i<8;i++){
-			var myLat = 26.8753 +(i+1)/1000;
+			var myLat = position.coords.latitude +(i+1)/1000;
 		    var myLong = position.coords.longitude+(i+1)/1000;
 
 			var coords = new google.maps.LatLng(myLat, myLong);
