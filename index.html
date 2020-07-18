@@ -20,8 +20,9 @@
 		var myLong = position.coords.longitude;
 
 		var coords = new google.maps.LatLng(myLat, myLong);
-
-		var mapOptions = {
+        console.log(myLat)
+		console.log(myLong);
+		var mapOptions = {  
 
 			zoom: 9,
 			center: coords,
@@ -32,6 +33,25 @@
 		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
 		var marker = new google.maps.Marker({map:map, position: coords});
+		for(let i =0 ;i<8;i++){
+			var myLat = 26.8753 +(i+1)/1000;
+		    var myLong = position.coords.longitude+(i+1)/1000;
+
+			var coords = new google.maps.LatLng(myLat, myLong);
+			console.log(myLat)
+			console.log(myLong);
+			var mapOptions = {  
+
+			zoom: 9,
+			center: coords,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+
+		}
+		var marker = new google.maps.Marker({map:map,
+		 label:"atul pandey" +i,
+		  position: coords});
+
+		}
 	
 	}
 
